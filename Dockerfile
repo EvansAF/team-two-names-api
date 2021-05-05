@@ -17,3 +17,9 @@ COPY . .
 
 EXPOSE 8080
 CMD [ "node", "server.js" ]
+
+#docker build -t team-two-api ./
+
+#docker build -t gcr.io/team-two-names-api/team-two-api ./
+
+#docker push gcr.io/team-two-names-api/team-two-api 
