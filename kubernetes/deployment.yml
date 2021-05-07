@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: team-two-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: team-two-names-api
+  template:
+    metadata:
+      labels:
+        app: team-two-names-api
+    spec:
+      containers:
+      - name: team-two-names-api
+        image: gcr.io/team-two-names-api/team-two-api
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        
+        
+        
+        
+        
